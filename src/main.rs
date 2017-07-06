@@ -5,4 +5,5 @@ fn main() {
 #[test]
 #[should_panic]
 fn do_test() {
+    panic!("Panic!");
 }
