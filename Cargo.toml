@@ -1,0 +1,6 @@
+[package]
+name = "travis-sandbox"
+version = "0.1.0"
+authors = ["Denis Kolodin <denis.kolodin@xdev.re>"]
+
+[dependencies]
