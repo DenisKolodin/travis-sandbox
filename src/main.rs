@@ -3,7 +3,7 @@ fn main() {
 }
 
 #[test]
-#[should_panic]
+#[should_panic(expected = "(left: `1`, right: `2`)")]
 fn do_test() {
-    panic!("Panic!");
+    assert_eq!(1, 2);
 }
