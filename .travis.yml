@@ -1,6 +1,7 @@
 language: rust
 rust:
   - stable
+  - nightly
 cache: cargo
 sudo: required
 group: deprecated-2017Q2
@@ -21,7 +22,6 @@ before_install:
 install:
 - sudo apt-get -qq --yes install gcc g++ make libsodium-dev libleveldb-dev libssl-dev
 script:
-- cargo fmt -p sandbox -- --write-mode=diff
-- cargo +$NIGHTLY_RUST clippy -- -D warnings
 - cargo audit
 - cargo test
+- ./hightly-test.sh
