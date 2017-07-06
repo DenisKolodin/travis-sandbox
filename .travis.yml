@@ -10,6 +10,8 @@ env:
     - NIGHTLY_RUST=nightly-2017-05-10
     - CLIPPY_VERS=0.0.131
     - RUSTFMT_VERS=0.8.4
+before_install:
+- rustup toolchain install $NIGHTLY_RUST
 script:
 - cargo test
 - ./nightly-test.sh
